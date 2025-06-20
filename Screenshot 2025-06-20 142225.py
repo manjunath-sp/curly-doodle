@@ -1,17 +1,9 @@
-from collections import Counter
+def solution(string):
+    frequency = [0] * 26
+    for character in string:
+        frequency[ord(character) - ord('a')] += 1
 
-def solution(S):
-    freq = Counter(S)
-    max_freq = max(freq.values())
-    candidates = [char for char in freq if freq[char] == max_freq]
-    return min(candidates)
-
-
-
-
-// DONT COPY THIS - ONLY FOR TESTING
-
-if __name__ == "__main__":
-    print(solution("121212"))  # Output: "2121"
-    print(solution("2121122"))  # Output: "221122"
-    print(solution("1111"))  # Output: "1111"
+    max_count = max(frequency)
+    for i in range(26):
+        if frequency[i] == max_count:
+            return chr(i + ord('a'))
