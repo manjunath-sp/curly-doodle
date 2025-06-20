@@ -7,6 +7,10 @@ def solution(S):
     return min(candidates)
 
 
+
+
+// DONT COPY THIS - ONLY FOR TESTING
+
 if __name__ == "__main__":
     print(solution("121212"))  # Output: "2121"
     print(solution("2121122"))  # Output: "221122"
